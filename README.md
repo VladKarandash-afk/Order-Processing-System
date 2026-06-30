@@ -10,6 +10,7 @@ While the frontend is implemented in PHP, the heavy lifting and business logic a
 * **Stored Procedures:** Business logic (order placement, inventory reservation, and status updates) is implemented using `PL/pgSQL` procedures, minimizing multiple round-trips between the application and the database.
 * **ACID Compliance:** Ensures that complex multi-step transactions (e.g., checking stock, reserving an item, creating an order record) either complete entirely or roll back safely.
 * **Relational Design:** Normalized database schema preventing data anomalies.
+* **Security:** Transaction control and triggers, which disallow having a game without full procedure being complited, prevent usage of SQL injections.
 
 ## Database Architecture
 The system revolves around several key entities:
